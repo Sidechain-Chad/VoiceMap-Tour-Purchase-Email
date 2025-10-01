@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/explore-active</title>
+    <g id="Icons/explore-active" stroke="none" fill="none" fill-rule="nonzero">
+        <circle id="Oval" fill="#FFFFFF" transform="translate(9.9979, 10) rotate(-45) translate(-9.9979, -10)" cx="9.99785714" cy="10" r="1"></circle>
+        <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 Z M14.9285714,5.92857143 L12.6428571,12.2142857 C12.5714286,12.4285714 12.4285714,12.5714286 12.2142857,12.6428571 L5.92857143,14.9285714 C5.21428571,15.1428571 4.78571429,14.5714286 5,14 L7.28571429,7.71428571 C7.35714286,7.5 7.5,7.35714286 7.71428571,7.28571429 L14,5 C14.5,4.85714286 15.1428571,5.21428571 14.9285714,5.92857143 L14.9285714,5.92857143 Z" id="Shape" fill="#FFFFFF"></path>
+    </g>
+</svg>
