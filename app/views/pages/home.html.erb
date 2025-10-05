@@ -4,10 +4,13 @@
   <div style="background: #ffffff; border-bottom: 1px solid #e5e5e5; padding: 16px; display: flex; justify-content: space-between; align-items: center; height: 80px;">
     <div style="display: flex; align-items: center;">
       <a href="https://voicemap.me/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-          <img src="app/assets/images/emails/voicemap/Group41-1.png" alt="VoiceMap" style="width: 162.85px; height: 36.52px;">
+          <%= image_tag('emails/voicemap/Group41-4.png', alt: "VoiceMap", style: "margin: auto; padding: 0;") %>
       </a>
     </div>
-    <a target="_blank" rel="noopener noreferrer" href="https://voicemap.app.link/email-header" style="background:rgba(226, 45, 58, 1); color: rgba(255, 255, 255, 1); padding: 8px 14px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 500; font-family: Manrope-Medium, sans-serif;">Install Now</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://voicemap.app.link/email-header" style="background:rgba(226, 45, 58, 1); color: rgba(255, 255, 255, 1); padding: 8px 14px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 500; font-family: Manrope-Medium, sans-serif; display: flex; align-items: center; gap: 8px;">
+      <%= image_tag('emails/voicemap/Cellphone.png', alt: "VoiceMap", style: "width: 8px; height: 13.31px; display: block; margin: 0 auto;") %>
+      Install Now
+      </a>
   </div>
 
   <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 640px; height: 59px; background-color: rgba(247, 248, 249, 1); color: rgba(69, 77, 87, 1); font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 500; line-height: 24px; text-align: center; padding: 16px 87px; margin: 20px auto; box-sizing: border-box; border: none;">You've added a new tour to your VoiceMap library!</h1>
@@ -23,12 +26,12 @@
 <!-- Tour Details Section -->
   <div style="display: flex; flex-direction: column; gap: 24px; width: 640px; background-color: rgba(247, 248, 249, 1); margin: 0 auto; padding: 0; box-sizing: border-box;">
 
-    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" alt="Seward Highway scenic view" style="width: 640px; height: 208px; margin: 0; padding: 0; display: block;">
+    <%= image_tag('emails/voicemap/WP_20140920_16_46_41_Pro_1744591093.png', alt: "Seward Highway scenic view", style: "width: 640px; height: 208px; margin: 0; padding: 0; display: block;") %>
 
     <div style="padding: 0 0 0 24px; margin-bottom: 24px;">
         <div style="display: flex; align-items: center; gap: 16px; width: 625px; height: 32px; margin-bottom: 24px;">
             <div style="width: 32px; height: 32px; background-color: rgba(226, 45, 58, 1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <span style="color: white; font-weight: 700; font-size: 14px;">1</span>
+                <%= image_tag('emails/voicemap/tours Copy.png', alt: "Copy", style: "display: block;") %>
             </div>
             <p style="width: 550px; height: 22px; color: rgba(105, 120, 134, 1); font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 400; line-height: 19px; margin: 0; padding: 0;">
                 <span style="color: rgba(105, 120, 134, 1);">Title:</span> <span style="color: rgba(40, 61, 82, 1); font-weight: 500;">Seward Highway: A Driving Tour of Alaska's Scenic and Historic Road</span>
@@ -37,7 +40,7 @@
 
         <div style="display: flex; align-items: center; gap: 16px; width: 625px; height: 32px; margin-bottom: 24px;">
             <div style="width: 32px; height: 32px; background-color: rgba(226, 45, 58, 1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <span style="color: white; font-weight: 700; font-size: 14px;">2</span>
+                <%= image_tag('emails/voicemap/Tag.png', alt: "Tag", style: "display: block;") %>
             </div>
             <p style="width: 234px; height: 22px; color: rgba(105, 120, 134, 1); font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 400; line-height: 19px; margin: 0; padding: 0;">
                 <span style="color: rgba(105, 120, 134, 1);">Destination:</span> <span style="color: rgba(40, 61, 82, 1); font-weight: 500;">Anchorage, Alaska</span>
@@ -46,7 +49,7 @@
 
         <div style="display: flex; align-items: center; gap: 16px; width: 625px; height: 32px;">
             <div style="width: 32px; height: 32px; background-color: rgba(226, 45, 58, 1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <span style="color: white; font-weight: 700; font-size: 14px;">3</span>
+                <%= image_tag('emails/voicemap/globe.png', alt: "Globe", style: "display: block;") %>
             </div>
             <p style="width: 96px; height: 22px; color: rgba(105, 120, 134, 1); font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 400; line-height: 19px; margin: 0; padding: 0;">
                 <span style="color: rgba(105, 120, 134, 1);">Price:</span> <span style="color: rgba(40, 61, 82, 1); font-weight: 500;">$19.99</span>
@@ -118,10 +121,10 @@
 <div style="display: flex; align-items: center; width: 640px; height: 241px; background-color: rgba(247, 248, 249, 1); margin: 40px auto 0; padding: 0 0; box-sizing: border-box;">
 
     <!-- Mask Image - Nature placeholder -->
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&amp;h=600&amp;fit=crop" alt="Nature scene" style="width: 335px; height: 238px; margin: 0 0 0 40px; padding: 0 0 0 0px;">
+   <%= image_tag('emails/voicemap/Mask.png', alt: "Nature scene", style: "width: 335px; height: 238px; margin: 0 0 0 40px; padding: 0;") %>
 
     <!-- VoiceMap Logo -->
-    <img src="app/assets/images/emails/voicemap/Group41-1.png" alt="VoiceMap Logo" style="width: 178.37px;height: 40px;margin: 0 39.83px 0 48px;padding: 0 0 0 0;">
+    <%= image_tag('emails/voicemap/VoiceMapLogo.png', alt: "VoiceMap Logo", style: "width: 178.37px; height: 40px; margin: 0 39.83px 0 48px; padding: 0;") %>
 
 </div>
 
@@ -162,7 +165,7 @@
 </div>
 
 <div style="width: 640px; margin: 30px auto 0; padding: 0; box-sizing: border-box;">
-    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&amp;h=400&amp;fit=crop" alt="App navigation interface" style="width: 244px; height: 50px; background-color: white; box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15); display: flex; object-fit: cover;">
+   <%= image_tag('emails/voicemap/Navbar.png', alt: "App navigation interface", style: "width: 244px; height: 50px; background-color: white; display: flex; object-fit: cover;") %>
 </div>
 
 <div style="width: 640px; margin: 30px auto 0; padding: 0; box-sizing: border-box;">
@@ -181,7 +184,7 @@
 
         <!-- Avatar Circle -->
         <div style="width: 21.5px; height: 21.43px; background-color: rgba(0, 147, 225, 1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <span style="color: white; font-size: 10px; font-weight: 600;">👤</span>
+            <%= image_tag('emails/voicemap/Lady.png', alt: "Avatar", style: "width: 21.5px; height: 21.43px; border-radius: 50%; flex-shrink: 0; object-fit: cover;") %>
         </div>
 
         <!-- My Account Text -->
@@ -276,7 +279,7 @@
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px; padding: 16px; width: 640px; height: 56px; background-color: rgba(247, 248, 249, 1); margin: 30px auto 0; box-sizing: border-box;">
 
     <!-- Question Mark Icon Placeholder -->
-    <span style="width: 20px; height: 20px; font-size: 20px; display: flex; align-items: center; justify-content: center;">❔</span>
+    <%= image_tag('emails/voicemap/Question.png', alt: "Question", style: "width: 20px; height: 20px; display: block;") %>
 
     <!-- Help Centre Link -->
     <a target="_blank" rel="noopener noreferrer" href="https://support.voicemap.me" style="color: rgba(0, 147, 225, 1); font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; text-decoration: none;">Help Centre</a>
