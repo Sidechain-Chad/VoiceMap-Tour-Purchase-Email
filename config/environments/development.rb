@@ -17,21 +17,26 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  # Configure mailer for SMTP (Gmail)
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
     domain: 'gmail.com',
-    user_name: 'your-email@gmail.com',
-    password: 'your-app-password', # NOT your regular password!
+    user_name: 'chadn94@gmail.com',
+    password: 'gtcwewgfjndlbsaf',
     authentication: 'plain',
     enable_starttls_auto: true
   }
+  config.action_mailer.perform_deliveries = true  # ← ADD THIS LINE
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  # Use letter_opener to open emails in the browser instead of sending them.
+
+  # config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -50,7 +55,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
