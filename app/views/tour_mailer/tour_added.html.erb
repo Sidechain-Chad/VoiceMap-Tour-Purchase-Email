@@ -3,35 +3,35 @@
         <tr>
             <td align="center" style="padding: 20px 0;">
 
-                <!-- Email Content Wrapper (701px) -->
+                <!-- Email Content Wrapper - 701px -->
                 <table width="701" border="0" cellpadding="0" cellspacing="0" style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 6px;">
 
-<!-- Header Section -->
-<tr>
-    <td bgcolor="#FFFFFF" style="background: #ffffff; border-bottom: 1px solid #e5e5e5; padding: 16px; height: 50px;">
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" height="50">
-            <tr>
-                <!-- Logo (Left) -->
-                <td width="50%" align="left" valign="middle" height="50">
-                    <a href="https://voicemap.me/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                        <img src="http://localhost:3000/assets/emails/voicemap/Group41-4.png" alt="VoiceMap" style="display: block; margin: auto; padding: 0; border: 0;">
-                    </a>
-                </td>
-                <!-- Install Now Button (Right) -->
-                <td width="50%" align="right" valign="middle" style="padding-right: 20px;" height="50">
-                    <a href="https://voicemap.app.link/email-header" target="_blank" rel="noopener noreferrer" style="background: #E22D3A; color: #FFFFFF; padding: 8px 14px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 500; font-family: 'Manrope', Arial, sans-serif; display: inline-block; line-height: 13px; vertical-align: middle;">
-                        <img src="http://localhost:3000/assets/emails/voicemap/Cellphone.png" alt="Cellphone" style="width: 8px; height: 13px; vertical-align: middle; margin-right: 8px; border: 0; display: inline-block;">
-                        Install Now
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-
-                    <!-- Title Section (H1) -->
+                    <!-- Header Section -->
                     <tr>
-                        <td align="center" style="padding: 20px 30px;">
+                        <td bgcolor="#FFFFFF" style="background: #ffffff; border-bottom: 1px solid #e5e5e5; padding: 0; width: 701px; height: 80px;">
+                            <table width="701" border="0" cellpadding="0" cellspacing="0" height="80">
+                                <tr>
+                                    <!-- Logo -->
+                                    <td width="50%" align="left" valign="middle" height="80" style="padding-left: 16px;">
+                                        <a href="https://voicemap.me/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                            <img src="http://localhost:3000/assets/emails/voicemap/Group41-4.png" alt="VoiceMap" style="display: block; border: 0;">
+                                        </a>
+                                    </td>
+                                    <!-- Install Now Button -->
+                                    <td width="50%" align="right" valign="middle" height="80" style="padding-right: 30px;">
+                                        <a href="https://voicemap.app.link/email-header" target="_blank" rel="noopener noreferrer" style="background: #E22D3A; color: #FFFFFF; padding: 8px 14px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 500; font-family: 'Manrope', Arial, sans-serif; display: inline-block; line-height: 13px; vertical-align: middle;">
+                                            <img src="http://localhost:3000/assets/emails/voicemap/Cellphone.png" alt="Cellphone" style="width: 8px; height: 13px; vertical-align: middle; margin-right: 8px; border: 0; display: inline-block;">
+                                            Install Now
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Title Section -->
+                    <tr>
+                        <td align="center" style="padding: 30px 30px 20px;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#F7F8F9" style="background-color: #F7F8F9; border-radius: 4px;">
                                 <tr>
                                     <td align="center" style="padding: 16px 87px;">
@@ -59,7 +59,7 @@
 
                     <!-- Your New Tour Header -->
                     <tr>
-                        <td style="padding: 40px 30px 0;">
+                        <td style="padding: 30px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="left">
@@ -70,9 +70,9 @@
                         </td>
                     </tr>
 
-                    <!-- Horizontal Rule / Divider -->
+                    <!-- Divider -->
                     <tr>
-                        <td style="padding: 10px 30px 20px;">
+                        <td style="padding: 15px 30px 20px;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0; line-height: 0; font-size: 0;">&nbsp;</td>
@@ -82,21 +82,25 @@
                     </tr>
 
                     <!-- Tour Details Section -->
+
                     <tr>
                         <td style="padding: 0 30px;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#F7F8F9" style="background-color: #F7F8F9;">
                                 <!-- Tour Image -->
                                 <tr>
                                     <td>
-                                        <img src="http://localhost:3000/assets/emails/voicemap/WP_20140920_16_46_41_Pro_1744591093.png" alt="Seward Highway scenic view" width="640" height="208" style="display: block; border: 0;">
+                                        <img src="http://localhost:3000/assets/emails/voicemap/<%= @route.image %>" alt="<%= @route.title %> scenic view" width="640" height="208" style="display: block; border: 0;">
                                     </td>
                                 </tr>
 
                                 <!-- Tour Details -->
+
                                 <tr>
                                     <td style="padding: 24px;">
                                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
                                             <!-- Title Row -->
+
                                             <tr>
                                                 <td style="padding-bottom: 24px;">
                                                     <table border="0" cellpadding="0" cellspacing="0">
@@ -122,6 +126,7 @@
                                             </tr>
 
                                             <!-- Destination Row -->
+
                                             <tr>
                                                 <td style="padding-bottom: 24px;">
                                                     <table border="0" cellpadding="0" cellspacing="0">
@@ -138,7 +143,7 @@
                                                             <td width="16"></td>
                                                             <td style="vertical-align: middle;">
                                                                 <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 19px; margin: 0;">
-                                                                    Destination: <span style="color: #283D52; font-weight: 500;">Anchorage, Alaska</span>
+                                                                    Destination: <span style="color: #283D52; font-weight: 500;"><%= @route.destination %></span>
                                                                 </p>
                                                             </td>
                                                         </tr>
@@ -147,6 +152,7 @@
                                             </tr>
 
                                             <!-- Price Row -->
+
                                             <tr>
                                                 <td>
                                                     <table border="0" cellpadding="0" cellspacing="0">
@@ -178,6 +184,7 @@
                     </tr>
 
                     <!-- Quick Tips Section -->
+
                     <tr>
                         <td style="padding: 40px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -191,8 +198,9 @@
                     </tr>
 
                     <!-- Divider -->
+
                     <tr>
-                        <td style="padding: 5px 30px 0;">
+                        <td style="padding: 15px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0;"></td>
@@ -202,39 +210,81 @@
                     </tr>
 
                     <!-- Quick Tips List -->
+
                     <tr>
-                        <td style="padding: 16px 30px 0;">
-                            <table width="640" border="0" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td>
-                                        <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0; text-indent: -20px;">
-                                            •&nbsp; VoiceMap tours generally follow a route from a specific starting point. This helps us give.<br>
-                                            &nbsp;&nbsp;&nbsp; clear directions and tell a story
-                                        </p>
-                                        <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0; text-indent: -20px;">
-                                            •&nbsp; If you're doing a walking tour or an indoor tour, we recommend using headphones.
-                                        </p>
-                                        <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0; text-indent: -20px;">
-                                            •&nbsp; If you're doing a driving tour, use bluetooth to play VoiceMap tours through vehicle<br>
-                                            &nbsp;&nbsp;&nbsp; speakers, just like music or a podcast.
-                                        </p>
-                                        <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;text-indent: -20px;">
-                                            •&nbsp; If you'd like to take a break, just end the tour by the button at the bottom left of the tour
-                                            player.<br>
-                                            &nbsp;&nbsp;&nbsp; We'll save your location and when you tap on on Resume, you can pick up exactly<br>
-                                            &nbsp;&nbsp;&nbsp; where you left off.
-                                        </p>
-                                        <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;text-indent: -20px;">
-                                            •&nbsp; If your tour is downloading slowly, it might be your connection, especially if you're using an<br>
-                                            &nbsp;&nbsp;&nbsp; eSIM or shared WiFi.
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
+                      <td style="padding: 16px 30px 0;">
+                          <table width="640" border="0" cellpadding="0" cellspacing="0">
+
+                              <!-- Bullet 1 -->
+
+                              <tr>
+                                  <td valign="top" style="width: 8px; padding-right: 5px;">
+                                      <span style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; line-height: 23px;">•</span>
+                                  </td>
+                                  <td>
+                                      <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;">
+                                          VoiceMap tours generally follow a route from a specific starting point. This helps us give clear directions and tell a story greater than the sum of its parts.
+                                      </p>
+                                  </td>
+                              </tr>
+
+                              <!-- Bullet 2 -->
+
+                              <tr>
+                                  <td valign="top" style="width: 8px; padding-right: 5px;">
+                                      <span style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; line-height: 23px;">•</span>
+                                  </td>
+                                  <td>
+                                      <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;">
+                                          If you're doing a walking tour or an indoor tour, we recommend using headphones.
+                                      </p>
+                                  </td>
+                              </tr>
+
+                              <!-- Bullet 3 -->
+
+                              <tr>
+                                  <td valign="top" style="width: 8px; padding-right: 5px;">
+                                      <span style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; line-height: 23px;">•</span>
+                                  </td>
+                                  <td>
+                                      <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;">
+                                          If you're doing a driving tour, use bluetooth to play VoiceMap tours through vehicle speakers, just like music or a podcast.
+                                      </p>
+                                  </td>
+                              </tr>
+
+                              <!-- Bullet 4 -->
+
+                              <tr>
+                                  <td valign="top" style="width: 8px; padding-right: 5px;">
+                                      <span style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; line-height: 23px;">•</span>
+                                  </td>
+                                  <td>
+                                      <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 16px 0;">
+                                          If you'd like to take a break, just end the tour by the button at the bottom left of the tour player. We'll save your location and when you tap on Resume, you can pick up exactly where you left off.
+                                      </p>
+                                  </td>
+                              </tr>
+
+                              <!-- Bullet 5 -->
+
+                              <tr>
+                                  <td valign="top" style="width: 8px; padding-right: 5px;">
+                                      <span style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; line-height: 23px;">•</span>
+                                  </td>
+                                  <td>
+                                      <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0 0 0 0;">
+                                          If your tour is downloading slowly, it might be your connection, especially if you're using an eSIM or shared WiFi.
+                                      </p>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
                     </tr>
 
                     <!-- Starting Your Tour Section -->
+
                     <tr>
                         <td style="padding: 40px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -248,8 +298,9 @@
                     </tr>
 
                     <!-- Divider -->
+
                     <tr>
-                        <td style="padding: 5px 30px 0;">
+                        <td style="padding: 15px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0;"></td>
@@ -259,6 +310,7 @@
                     </tr>
 
                     <!-- Starting Your Tour Content -->
+
                     <tr>
                         <td style="padding: 16px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -270,7 +322,7 @@
                                         </p>
                                         <h3 style="color: #E22D3A; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 500; line-height: 22px; margin: 0 0 10px 0;">Text directions</h3>
                                         <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0;">
-                                            The tour begins at the large parking area for Potter Marsh Wildlife Viewing Boardwalk, about 15 minutes south of downtown Anchorage. To get there, drive southbound on the Seward Highway past the exit for Rabbit Creek Road/Old Seward Highway. As you leave Anchorage, watch for a large brown sign marking the Anchorage Coastal Wildlife Refuge, with arrows pointing left for Potter Marsh Boardwalk and right for Rabbit Creek Rifle Range. Use the left-turning lane to take the Seward Highway turnoff for Potter Marsh access road, which begins at East 154th Avenue and leads to the parking area at the end.
+                                            <%= @route.directions %>
                                         </p>
                                     </td>
                                 </tr>
@@ -279,6 +331,7 @@
                     </tr>
 
                     <!-- Image Section -->
+
                     <tr>
                         <td style="padding: 40px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#F7F8F9" style="background-color: #F7F8F9;">
@@ -295,6 +348,7 @@
                     </tr>
 
                     <!-- Installing VoiceMap Section -->
+
                     <tr>
                         <td style="padding: 40px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -308,8 +362,9 @@
                     </tr>
 
                     <!-- Divider -->
+
                     <tr>
-                        <td style="padding: 5px 30px 0;">
+                        <td style="padding: 15px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0;"></td>
@@ -319,13 +374,14 @@
                     </tr>
 
                     <!-- Installing VoiceMap Content -->
+
                     <tr>
                         <td style="padding: 16px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
                                         <p style="color: #697886; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 23px; margin: 0;">
-                                            We strongly recommend using the VoiceMap app to actually do the tour. It works offline and uses GPS to play outdoor tours like walks and drives automatically. If you don't already have it, search the Apple App Store or Google Play, or go to <a href="https://onelink.to/voicemap" target="_blank" style="color: #0093E1; text-decoration: underline;">onelink.to/voicemap</a> on your mobile device.
+                                            We strongly recommend using the VoiceMap app to actually do the tour. It works offline and uses GPS to play outdoor tours like walks and drives automatically. If you don't already have it, search the Apple App Store or Google Play, or go to <a href="http://link.voicemap.me/app" target="_blank" style="color: #0093E1; text-decoration: underline;">onelink.to/voicemap</a> on your mobile device.
                                         </p>
                                     </td>
                                 </tr>
@@ -334,6 +390,7 @@
                     </tr>
 
                     <!-- Accessing Your Tour Section -->
+
                     <tr>
                         <td style="padding: 20px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -347,8 +404,9 @@
                     </tr>
 
                     <!-- Divider -->
+
                     <tr>
-                        <td style="padding: 5px 30px 0;">
+                        <td style="padding: 15px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0;"></td>
@@ -358,6 +416,7 @@
                     </tr>
 
                     <!-- In the App -->
+
                     <tr>
                         <td style="padding: 16px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -374,6 +433,7 @@
                     </tr>
 
                     <!-- Navbar Image -->
+
                     <tr>
                         <td style="padding: 30px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -387,6 +447,7 @@
                     </tr>
 
                     <!-- On the Web -->
+
                     <tr>
                         <td style="padding: 30px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -403,9 +464,10 @@
                     </tr>
 
                     <!-- My Account Button -->
+
                     <tr>
                         <td style="padding: 20px 30px 0;">
-                            <table width="129"  border="0" cellpadding="0" cellspacing="0" style="border: 1px solid rgba(226, 45, 58, 1); border-radius: 3px; background-color: rgba(251, 235, 235, 1);">
+                            <table width="129" border="0" cellpadding="0" cellspacing="0" bgcolor="#FBEBEB" style="border: 1px solid #E22D3A; border-radius: 3px;">
                                 <tr>
                                     <td style="padding: 5px 7px;">
                                         <table border="0" cellpadding="0" cellspacing="0">
@@ -415,11 +477,11 @@
                                                 </td>
                                                 <td width="7"></td>
                                                 <td style="vertical-align: middle;">
-                                                    <span style="color: rgba(226, 45, 58, 1); font-family: 'Manrope', Arial, sans-serif; font-size: 10px; font-weight: 600;">My Account</span>
+                                                    <span style="color: #E22D3A; font-family: 'Manrope', Arial, sans-serif; font-size: 10px; font-weight: 600;">My Account</span>
                                                 </td>
                                                 <td width="7"></td>
                                                 <td style="vertical-align: middle;">
-                                                    <span style="color: rgba(226, 45, 58, 1); font-size: 10px;">▼</span>
+                                                    <span style="color: #E22D3A; font-size: 10px;">▼</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -429,20 +491,25 @@
                         </td>
                     </tr>
 
-                    <!-- Account Dropdown Menu -->
+
+                   <!-- Account Dropdown Menu -->
+
                     <tr>
                         <td style="padding: 3px 30px 0;">
-                            <table width="129" border="0" cellpadding="8" cellspacing="0" style="background-color: rgba(255, 255, 255, 1); border-radius: 4px; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);">
+                            <table width="129" border="0" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF" style="border: 1px solid #E0E0E0; border-radius: 4px;">
+
                                 <!-- Account Header -->
+
                                 <tr>
-                                    <td style="padding: 8px 8px 10px 8px;">
-                                        <p style="color: rgba(69, 77, 87, 1); font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 600; margin: 0;">Account</p>
+                                    <td style="padding: 8px 8px 10px 8px; vertical-align: middle;">
+                                        <p style="color: #454D57; font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 600; margin: 0;">Account</p>
                                     </td>
                                 </tr>
 
                                 <!-- My Library -->
+
                                 <tr>
-                                    <td style="padding: 0 8px 15px 8px;">
+                                    <td style="padding: 0 8px 15px 8px; vertical-align: middle;">
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="11" style="vertical-align: middle;">
@@ -450,7 +517,7 @@
                                                 </td>
                                                 <td width="8"></td>
                                                 <td style="vertical-align: middle;">
-                                                    <span style="color: rgba(69, 77, 87, 1); font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 400;">My Library</span>
+                                                    <span style="color: #454D57; font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 400;">My Library</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -458,8 +525,9 @@
                                 </tr>
 
                                 <!-- Edit Settings -->
+
                                 <tr>
-                                    <td style="padding: 0 8px 8px 8px;">
+                                    <td style="padding: 0 8px 8px 8px; vertical-align: middle;">
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="11" style="vertical-align: middle;">
@@ -467,7 +535,7 @@
                                                 </td>
                                                 <td width="8"></td>
                                                 <td style="vertical-align: middle;">
-                                                    <span style="color: rgba(69, 77, 87, 1); font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 400;">Edit Settings</span>
+                                                    <span style="color: #454D57; font-family: 'Manrope', Arial, sans-serif; font-size: 9px; font-weight: 400;">Edit Settings</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -477,7 +545,12 @@
                         </td>
                     </tr>
 
+                    <tr>
+                        <td height="15" style="font-size: 0; line-height: 0;">&nbsp;</td>
+                    </tr>
+
                     <!-- Getting Support Section -->
+
                     <tr>
                         <td style="padding: 20px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -491,8 +564,9 @@
                     </tr>
 
                     <!-- Divider -->
+
                     <tr>
-                        <td style="padding: 5px 30px 0;">
+                        <td style="padding: 15px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="border-bottom: 1px solid #DFE2E0;"></td>
@@ -502,6 +576,7 @@
                     </tr>
 
                     <!-- Getting Support Content -->
+
                     <tr>
                         <td style="padding: 10px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -517,6 +592,7 @@
                     </tr>
 
                     <!-- Closing Message -->
+
                     <tr>
                         <td style="padding: 10px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -532,6 +608,7 @@
                     </tr>
 
                     <!-- Sign Off -->
+
                     <tr>
                         <td style="padding: 20px 30px;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0">
@@ -549,7 +626,20 @@
                         </td>
                     </tr>
 
+                    <!-- Horizontal Rule / Divider -->
+
+                    <tr>
+                        <td style="padding: 0 30px 0;">
+                            <table width="640" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="border-bottom: 1px solid #DFE2E0; line-height: 0; font-size: 0;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
                     <!-- Help Centre Section -->
+
                     <tr>
                         <td style="padding: 30px 30px 0;">
                             <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#F7F8F9" style="background-color: #F7F8F9;">
@@ -573,6 +663,7 @@
                     </tr>
 
                     <!-- New Footer Section - Inside Content Wrapper -->
+                    
                     <tr>
                         <td style="padding: 30px 0 0;">
                             <div style="width: 100%; height:167px; background:#283d52;">
