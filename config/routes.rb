@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'easter_egg', to: 'easter_eggs#show'
+
   get 'pages/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

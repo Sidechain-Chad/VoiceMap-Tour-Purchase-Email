@@ -1,0 +1,205 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+
+  /* Loading Pulse */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Green Highlight Style */
+  .bg-highlight {
+    background-color: #f0fdf4;
+    border-radius: 8px;
+    padding: 15px;
+    border-left: 4px solid #16a34a;
+  }
+
+  /* Transition */
+  .fade-element {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+  }
+
+  .fade-out {
+    opacity: 0 !important;
+  }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+
+  <div class="card shadow border-0" style="max-width: 600px; width: 100%; border-radius: 12px; overflow: hidden;">
+
+    <div class="position-relative">
+      <img src="https://media.voicemap.me/uploads/sound_bite_image/image/42508/webp_full/09_neptune_b.webp"
+           class="card-img-top"
+           alt="Neptune's Fountain"
+           style="height: 300px; object-fit: cover;">
+
+      <button id="magic-btn" class="btn btn-light position-absolute shadow d-flex align-items-center gap-2"
+              style="bottom: 20px; right: 20px; border-radius: 50px; padding: 10px 20px; border: 1px solid #fff; transition: all 0.2s;">
+        <span class="fs-5 icon">✨</span>
+        <span class="fw-bold text-dark button-text">Remix with AI</span>
+      </button>
+    </div>
+
+    <div class="card-body p-4">
+      <h6 class="text-uppercase text-muted fw-bold small mb-2">Location 9 • Trento</h6>
+      <h2 class="card-title fw-bold text-dark mb-4">Neptune's Fountain</h2>
+
+      <div class="bg-light rounded p-3 mb-4 d-flex align-items-center">
+        <audio id="audio-player" controls class="w-100">
+          <source src="/neptune_original.mp3" type="audio/mp3">
+          Your browser does not support audio.
+        </audio>
+      </div>
+
+      <div class="script-content" style="line-height: 1.7; color: #4a5568; min-height: 300px;">
+
+        <div id="original-text" class="fade-element">
+          <p>Stop for a moment at Neptune's Fountain.</p>
+          <p>This fountain was built between 1767 and 1769, although the original sculptures are now kept in nearby palazzo Thun and the ones you see here are from the 1940's.</p>
+          <p>The fountain was used to bring fresh water into the city. To keep the water clean, it was prohibited to wash children's nappies, animal guts or frogs in the fountain.</p>
+          <p>The fact that the sculptures have a non religious theme is a testament to the waning power of the church over the city, with Neptune's trident perhaps referring to the Roman name of the city, Tridentum.</p>
+          <p>Let's keep going. Head out of the square continuing in the direction you were going, keeping the café to your left, the torre civica on your right then head left into Piazza Mario Pasi</p>
+        </div>
+
+        <div id="remixed-text" class="d-none fade-element fade-out">
+          </div>
+
+      </div>
+
+      <div class="mt-4 pt-3 border-top d-flex justify-content-between text-muted small">
+        <span id="mode-label" class="fade-element">Mode: Walking Tour 🚶</span>
+        <span id="duration-label" class="fade-element">Original Length</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    // Elements
+    const magicBtn = document.getElementById("magic-btn");
+    const originalText = document.getElementById("original-text");
+    const remixedText = document.getElementById("remixed-text");
+    const player = document.getElementById("audio-player");
+    const modeLabel = document.getElementById("mode-label");
+    const durationLabel = document.getElementById("duration-label");
+
+    // State
+    let isRemixed = false;
+
+    // Data
+    const originalData = {
+      audio: "/neptune_original.mp3",
+      mode: "Mode: Walking Tour 🚶",
+      duration: "Original Length"
+    };
+
+    const remixData = {
+      text: "This fountain was built between 1767 and 1769, although the original sculptures are now kept in nearby palazzo Thun and the ones you see here are from the 1940's. The fountain was used to bring fresh water into the city. To keep the water clean, it was prohibited to wash children's nappies, animal guts or frogs in the fountain. The fact that the sculptures have a non religious theme is a testament to the waning power of the church over the city, with Neptune's trident perhaps referring to the Roman name of the city, Tridentum.",
+      audio: "/neptune_remix.mp3",
+      mode: "Mode: Armchair History 🛋️",
+      duration: "43s"
+    };
+
+    // Helper: Cross Fade Function
+    const crossFade = (elementOut, elementIn, callback) => {
+      // 1. Fade Out
+      elementOut.classList.add("fade-out");
+
+      // 2. Wait for transition (400ms) then Swap
+      setTimeout(() => {
+        elementOut.classList.add("d-none");
+        elementIn.classList.remove("d-none");
+
+        // Trigger callback (update text/audio while invisible)
+        if (callback) callback();
+
+        // 3. Small buffer to ensure DOM render, then Fade In
+        requestAnimationFrame(() => {
+          elementIn.classList.remove("fade-out");
+        });
+      }, 400);
+    };
+
+    // Click Handler
+    magicBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (!isRemixed) {
+        // === GO TO REMIX ===
+
+        // Loading State
+        magicBtn.disabled = true;
+        magicBtn.innerHTML = `
+          <div class="spinner-border spinner-border-sm text-dark me-2" role="status"></div>
+          <span class="fw-bold text-dark">Designing Sound...</span>
+        `;
+
+        // Wait 5 Seconds (Simulation)
+        setTimeout(() => {
+
+          // Prepare Remix Text
+          remixedText.innerHTML = `<p>${remixData.text}</p>`;
+          remixedText.classList.add("bg-highlight");
+
+          // Execute Cross Fade
+          crossFade(originalText, remixedText, () => {
+            // Update Data while hidden
+            player.src = remixData.audio;
+            player.load();
+            player.play().catch(e => console.log("Autoplay blocked"));
+
+            modeLabel.innerHTML = remixData.mode;
+            durationLabel.innerHTML = remixData.duration;
+
+            // Update Button
+            magicBtn.disabled = false;
+            magicBtn.innerHTML = `
+              <span class="fs-5">🔄</span>
+              <span class="fw-bold text-dark">Restore Original</span>
+            `;
+          });
+
+          isRemixed = true;
+        }, 5000);
+
+      } else {
+        // === RESTORE ORIGINAL ===
+
+        // Brief "Restoring" state (for smoothness)
+        magicBtn.disabled = true;
+        magicBtn.innerHTML = `
+          <div class="spinner-border spinner-border-sm text-dark me-2" role="status"></div>
+          <span class="fw-bold text-dark">Restoring...</span>
+        `;
+
+        // Small 500ms delay for the button animation to register
+        setTimeout(() => {
+            crossFade(remixedText, originalText, () => {
+              // Update Data
+              player.src = originalData.audio;
+              player.load();
+              // Optional: player.play();
+
+              modeLabel.innerHTML = originalData.mode;
+              durationLabel.innerHTML = originalData.duration;
+
+              // Reset Button
+              magicBtn.disabled = false;
+              magicBtn.innerHTML = `
+                <span class="fs-5">✨</span>
+                <span class="fw-bold text-dark">Remix with AI</span>
+              `;
+            });
+
+            isRemixed = false;
+        }, 500);
+      }
+    });
+  });
+</script>
